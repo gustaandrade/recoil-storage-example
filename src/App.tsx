@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import BucketForm from './components/BucketForm';
+import FruitForm from './components/FruitForm';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Baldes & Frutas</h1>
+
+      <div className='form_row'>
+        <BucketForm />
+        <FruitForm />
+      </div>
+
+      {/* <div className='fruit_row'>
+        <FruitForm />
+      </div>
+
+      <div className='bucket_row'>
+        <BucketForm />
+      </div> */}
     </div>
   );
 }

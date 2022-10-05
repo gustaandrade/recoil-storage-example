@@ -1,0 +1,42 @@
+.fruit_container {
+  width: 30%;
+
+  text-align: left;
+}
+
+.fruit_form {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #d1dafe;
+
+  border-radius: 4px;
+
+  padding: 6px 24px 24px 24px;
+}
+
+.fruit_label {
+  margin-bottom: 8px;
+}
+
+.fruit_input {
+  border: 0;
+  border-radius: 4px;
+
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.fruit_button {
+  width: 100%;
+
+  font-weight: bold;
+
+  background-color: #3962ff;
+  color: white;
+
+  border: 0;
+  border-radius: 4px;
+
+  padding: 12px 24px;
+}
