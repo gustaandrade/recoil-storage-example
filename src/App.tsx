@@ -4,6 +4,8 @@ import BucketForm from './components/BucketForm';
 import FruitForm from './components/FruitForm';
 
 import './App.css';
+import FruitArea from './components/FruitArea';
+import BucketArea from './components/BucketArea';
 
 function App() {
   return (
@@ -15,13 +17,13 @@ function App() {
         <FruitForm />
       </div>
 
-      {/* <div className='fruit_row'>
-        <FruitForm />
+      <div className='fruit_row'>
+        <FruitArea />
       </div>
 
       <div className='bucket_row'>
-        <BucketForm />
-      </div> */}
+        <BucketArea />
+      </div>
     </div>
   );
 }

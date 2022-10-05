@@ -1,6 +1,4 @@
-.bucket_container {
-  width: 30%;
-
+.bucket_form_container {
   text-align: left;
 }
 
@@ -15,11 +13,11 @@
   padding: 6px 24px 24px 24px;
 }
 
-.bucket_label {
+.bucket_form_label {
   margin-bottom: 8px;
 }
 
-.bucket_input {
+.bucket_form_input {
   border: 0;
   border-radius: 4px;
 
@@ -27,7 +25,7 @@
   margin-bottom: 24px;
 }
 
-.bucket_button {
+.bucket_form_button {
   width: 100%;
 
   font-weight: bold;

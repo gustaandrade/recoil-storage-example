@@ -1,6 +1,6 @@
 export interface Bucket {
   name: string;
-  capacity: string;
+  capacity: number;
 }
 
 export interface Fruit {
