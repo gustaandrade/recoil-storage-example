@@ -11,16 +11,21 @@ const Bucket: React.FC<BucketProps> = ({ bucket }) => {
 
   return (
     <div className='bucket_container'>
-      <p className='bucket_name'>{bucket.name}</p>
-      <p className='bucket_price'>{bucket.capacity}</p>
+      <span className='bucket_name'>{bucket.name}</span>
+      <span className='bucket_price'>{bucket.capacity}</span>
 
       <div className='bucket_fruit_container'>
-        {buckets ? (
-          <button className='bucket_button'>Remover balde</button>
-        ) : (
-          <button className='bucket_button' disabled>
-            Não é possível deletar baldes com frutas
-          </button>
+        {buckets && buckets.length > 0 && (
+          <>
+            {bucket.fruits &&
+              bucket?.fruits?.map((fruit, index) => (
+                <>
+                  <span key={`${fruit.name}-${index}`}>{fruit.name}</span>
+                  <button className='bucket_button'>+</button>
+                  <button className='bucket_button'>-</button>
+                </>
+              ))}
+          </>
         )}
       </div>
     </div>

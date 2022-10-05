@@ -12,13 +12,16 @@ const BucketArea: React.FC = () => {
   return (
     <div className='bucket_area_container'>
       <h2>Baldes</h2>
-      <div className='bucket_area_grid'>
+
+      <div
+        className={buckets.length > 0 ? 'bucket_area_grid' : 'bucket_area_flex'}
+      >
         {buckets && buckets.length > 0 ? (
           buckets.map((bucket, index) => (
             <Bucket key={`${bucket.name}-${index}`} bucket={bucket} />
           ))
         ) : (
-          <div>Não existe nenhum balde cadastrado</div>
+          <p>Nenhum balde foi cadastrado</p>
         )}
       </div>
     </div>

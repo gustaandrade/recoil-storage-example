@@ -12,13 +12,16 @@ const FruitArea: React.FC = () => {
   return (
     <div className='fruit_area_container'>
       <h2>Frutas</h2>
-      <div className='fruit_area_grid'>
+
+      <div
+        className={fruits.length > 0 ? 'fruit_area_grid' : 'fruit_area_flex'}
+      >
         {fruits && fruits.length > 0 ? (
           fruits.map((fruit, index) => (
             <Fruit key={`${fruit.name}-${index}`} fruit={fruit} />
           ))
         ) : (
-          <p>Não existe nenhuma fruta no cadastro</p>
+          <p>Nenhuma fruta foi cadastrada</p>
         )}
       </div>
     </div>

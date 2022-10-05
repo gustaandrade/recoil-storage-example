@@ -10,3 +10,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 24px;
 }
+
+.bucket_area_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

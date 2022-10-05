@@ -16,7 +16,7 @@ const BucketForm: React.FC = () => {
 
     setBucketState(bucketState => [
       ...bucketState,
-      { name: name, capacity: capacity }
+      { name: name, capacity: capacity, fruits: [] }
     ]);
     setName('');
     setCapacity(0);
