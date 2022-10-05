@@ -17,9 +17,16 @@ const Fruit: React.FC<FruitProps> = ({ fruit }) => {
   };
 
   const handleBucketChoice = () => {
-    const bucket = buckets.find(bucket => bucket.name === selectedValue);
+    let newBucketList = [...buckets].map(bucket => {
+      if (
+        bucket.name === selectedValue &&
+        bucket.fruits.filter(f => f.name === fruit.name).length === 0
+      )
+        return { ...bucket, fruits: [...bucket.fruits, fruit] };
+      else return bucket;
+    });
 
-    console.log(bucket);
+    setBuckets(newBucketList);
   };
 
   return (

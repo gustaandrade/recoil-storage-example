@@ -12,18 +12,23 @@ const Bucket: React.FC<BucketProps> = ({ bucket }) => {
   return (
     <div className='bucket_container'>
       <span className='bucket_name'>{bucket.name}</span>
-      <span className='bucket_price'>{bucket.capacity}</span>
+      <span className='bucket_capacity'>Capacidade {bucket.capacity}</span>
 
       <div className='bucket_fruit_container'>
         {buckets && buckets.length > 0 && (
           <>
             {bucket.fruits &&
               bucket?.fruits?.map((fruit, index) => (
-                <>
-                  <span key={`${fruit.name}-${index}`}>{fruit.name}</span>
+                <div className='bucket_fruit_cell'>
+                  <span
+                    key={`${fruit.name}-${index}`}
+                    className='bucket_fruit_name'
+                  >
+                    {fruit.name}
+                  </span>
                   <button className='bucket_button'>+</button>
                   <button className='bucket_button'>-</button>
-                </>
+                </div>
               ))}
           </>
         )}
