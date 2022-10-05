@@ -26,12 +26,20 @@ const Bucket: React.FC<BucketProps> = ({ bucket }) => {
                   >
                     {fruit.name}
                   </span>
-                  <button className='bucket_button'>+</button>
-                  <button className='bucket_button'>-</button>
+                  <button className='bucket_fruit_button'>+</button>
+                  <button className='bucket_fruit_button'>-</button>
                 </div>
               ))}
           </>
         )}
+
+        <button
+          className='bucket_button'
+          disabled={bucket.fruits.length <= 0}
+          onClick={() => console.log('delete')}
+        >
+          Remover balde
+        </button>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@
   flex-direction: column;
   gap: 6px;
 
-  margin: 24px 0;
+  margin-top: 24px;
 }
 
 .bucket_name {
@@ -53,6 +53,20 @@
   font-weight: 700;
 }
 
+.bucket_fruit_button {
+  font-size: 1.15rem;
+
+  font-weight: bold;
+
+  background-color: #4caf50;
+  color: white;
+
+  border: 0;
+  border-radius: 4px;
+
+  padding: 8px;
+}
+
 .bucket_button {
   width: 100%;
 
@@ -64,7 +78,8 @@
   border: 0;
   border-radius: 4px;
 
-  padding: 8px;
+  padding: 12px 24px;
+  margin-top: 16px;
 }
 
 .bucket_button:disabled {
