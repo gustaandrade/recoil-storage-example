@@ -18,10 +18,7 @@ const Fruit: React.FC<FruitProps> = ({ fruit }) => {
 
   const handleBucketChoice = () => {
     let newBucketList = [...buckets].map(bucket => {
-      if (
-        bucket.name === selectedValue &&
-        bucket.fruits.filter(f => f.name === fruit.name).length === 0
-      )
+      if (bucket.name === selectedValue)
         return {
           ...bucket,
           usedCapacity: Math.round(
@@ -54,11 +51,13 @@ const Fruit: React.FC<FruitProps> = ({ fruit }) => {
               <option disabled value={selectedValue}>
                 Escolha o balde...
               </option>
-              {buckets.map((bucket, index) => (
-                <option key={`${bucket.name}-${index}`} value={bucket.name}>
-                  {`${bucket.name}`}
-                </option>
-              ))}
+              {buckets
+                .filter(bucket => bucket.usedCapacity < 100)
+                .map((bucket, index) => (
+                  <option key={`${bucket.name}-${index}`} value={bucket.name}>
+                    {`${bucket.name}`}
+                  </option>
+                ))}
             </select>
 
             <button

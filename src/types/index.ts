@@ -1,4 +1,5 @@
 export interface Bucket {
+  id: string;
   name: string;
   totalCapacity: number;
   usedCapacity: number;
@@ -6,6 +7,7 @@ export interface Bucket {
 }
 
 export interface Fruit {
+  id: string;
   name: string;
   price: number;
 }

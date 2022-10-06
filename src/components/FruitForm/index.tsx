@@ -14,7 +14,14 @@ const FruitForm: React.FC = () => {
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setBucketState(fruitState => [...fruitState, { name: name, price: price }]);
+    setBucketState(fruitState => [
+      ...fruitState,
+      {
+        id: crypto.randomUUID(),
+        name: name,
+        price: price
+      }
+    ]);
     // setName('');
     // setPrice(0);
   };

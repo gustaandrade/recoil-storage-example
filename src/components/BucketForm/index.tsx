@@ -16,7 +16,13 @@ const BucketForm: React.FC = () => {
 
     setBucketState(bucketState => [
       ...bucketState,
-      { name: name, totalCapacity: capacity, usedCapacity: 0, fruits: [] }
+      {
+        id: crypto.randomUUID(),
+        name: name,
+        totalCapacity: capacity,
+        usedCapacity: 0,
+        fruits: []
+      }
     ]);
     // setName('');
     // setCapacity(0);
