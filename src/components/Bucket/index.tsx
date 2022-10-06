@@ -67,7 +67,8 @@ const Bucket: React.FC<BucketProps> = ({ bucket }) => {
                 key={`${fruit.name}-${index}`}
                 className='bucket_fruit_name'
               >
-                {fruit.name} - {convertPriceToCurrency(fruit.price)}
+                {index + 1} - {fruit.name} -{' '}
+                {convertPriceToCurrency(fruit.price)}
               </span>
               <button
                 className='bucket_fruit_button'
