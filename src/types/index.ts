@@ -1,6 +1,7 @@
 export interface Bucket {
   name: string;
-  capacity: number;
+  totalCapacity: number;
+  usedCapacity: number;
   fruits: Fruit[];
 }
 

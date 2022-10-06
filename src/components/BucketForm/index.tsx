@@ -16,10 +16,10 @@ const BucketForm: React.FC = () => {
 
     setBucketState(bucketState => [
       ...bucketState,
-      { name: name, capacity: capacity, fruits: [] }
+      { name: name, totalCapacity: capacity, usedCapacity: 0, fruits: [] }
     ]);
-    setName('');
-    setCapacity(0);
+    // setName('');
+    // setCapacity(0);
   };
 
   return (

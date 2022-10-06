@@ -17,9 +17,12 @@ const BucketArea: React.FC = () => {
         className={buckets.length > 0 ? 'bucket_area_grid' : 'bucket_area_flex'}
       >
         {buckets && buckets.length > 0 ? (
-          buckets.map((bucket, index) => (
-            <Bucket key={`${bucket.name}-${index}`} bucket={bucket} />
-          ))
+          buckets
+            .slice()
+            .sort((a, b) => b.usedCapacity - a.usedCapacity)
+            .map((bucket, index) => (
+              <Bucket key={`${bucket.name}-${index}`} bucket={bucket} />
+            ))
         ) : (
           <p>Nenhum balde foi cadastrado</p>
         )}

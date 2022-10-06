@@ -15,8 +15,8 @@ const FruitForm: React.FC = () => {
     event.preventDefault();
 
     setBucketState(fruitState => [...fruitState, { name: name, price: price }]);
-    setName('');
-    setPrice(0);
+    // setName('');
+    // setPrice(0);
   };
 
   return (

@@ -22,7 +22,13 @@ const Fruit: React.FC<FruitProps> = ({ fruit }) => {
         bucket.name === selectedValue &&
         bucket.fruits.filter(f => f.name === fruit.name).length === 0
       )
-        return { ...bucket, fruits: [...bucket.fruits, fruit] };
+        return {
+          ...bucket,
+          usedCapacity: Math.round(
+            ((bucket.fruits.length + 1) / bucket.totalCapacity) * 100
+          ),
+          fruits: [...bucket.fruits, fruit]
+        };
       else return bucket;
     });
 

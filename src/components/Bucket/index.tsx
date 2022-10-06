@@ -12,14 +12,20 @@ const Bucket: React.FC<BucketProps> = ({ bucket }) => {
   return (
     <div className='bucket_container'>
       <span className='bucket_name'>{bucket.name}</span>
-      <span className='bucket_capacity'>Capacidade {bucket.capacity}</span>
+      <span className='bucket_capacity'>
+        Capacidade: {bucket.fruits.length}/{bucket.totalCapacity} -{' '}
+        {bucket.usedCapacity}%
+      </span>
 
       <div className='bucket_fruit_container'>
         {buckets && buckets.length > 0 && (
           <>
             {bucket.fruits &&
               bucket?.fruits?.map((fruit, index) => (
-                <div className='bucket_fruit_cell'>
+                <div
+                  key={`${fruit.name}-${index}`}
+                  className='bucket_fruit_cell'
+                >
                   <span
                     key={`${fruit.name}-${index}`}
                     className='bucket_fruit_name'
