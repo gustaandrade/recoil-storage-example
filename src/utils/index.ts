@@ -1,6 +1,3 @@
-export const convertPriceToCurrency = (price: number): string => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(price);
+export const convertPriceToCurrency = (price: string): string => {
+  return 'R$ ' + price;
 };

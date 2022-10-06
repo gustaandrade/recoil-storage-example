@@ -7,7 +7,7 @@ import './styles.css';
 
 const FruitForm: React.FC = () => {
   const [name, setName] = useState<string>('');
-  const [price, setPrice] = useState<number>(0);
+  const [price, setPrice] = useState<string>('');
 
   const setBucketState = useSetRecoilState(fruitState);
 
@@ -22,8 +22,8 @@ const FruitForm: React.FC = () => {
         price: price
       }
     ]);
-    // setName('');
-    // setPrice(0);
+    setName('');
+    setPrice('');
   };
 
   return (
@@ -38,6 +38,7 @@ const FruitForm: React.FC = () => {
           className='fruit_form_input'
           id='fruitName'
           type='text'
+          value={name}
           onChange={event => setName(event.target.value)}
         />
 
@@ -47,11 +48,16 @@ const FruitForm: React.FC = () => {
         <input
           className='fruit_form_input'
           id='fruitPrice'
-          type='number'
-          onChange={event => setPrice(Number(event.target.value))}
+          type='text'
+          value={price}
+          onChange={event => setPrice(event.target.value)}
         />
 
-        <button className='fruit_form_button' type='submit'>
+        <button
+          className='fruit_form_button'
+          type='submit'
+          disabled={name === '' || price === ''}
+        >
           Salvar
         </button>
       </form>

@@ -11,6 +11,13 @@
   grid-gap: 24px;
 }
 
+@media (max-width: 800px) {
+  .bucket_area_grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .bucket_area_flex {
   display: flex;
   justify-content: center;

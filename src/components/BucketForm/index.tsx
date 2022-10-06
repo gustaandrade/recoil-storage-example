@@ -24,8 +24,8 @@ const BucketForm: React.FC = () => {
         fruits: []
       }
     ]);
-    // setName('');
-    // setCapacity(0);
+    setName('');
+    setCapacity(0);
   };
 
   return (
@@ -40,6 +40,7 @@ const BucketForm: React.FC = () => {
           className='bucket_form_input'
           id='bucketName'
           type='text'
+          value={name}
           onChange={event => setName(event.target.value)}
         />
 
@@ -50,10 +51,15 @@ const BucketForm: React.FC = () => {
           className='bucket_form_input'
           id='bucketCapacity'
           type='number'
+          value={capacity}
           onChange={event => setCapacity(Number(event.target.value))}
         />
 
-        <button className='bucket_form_button' type='submit'>
+        <button
+          className='bucket_form_button'
+          type='submit'
+          disabled={name === '' || capacity === 0}
+        >
           Salvar
         </button>
       </form>

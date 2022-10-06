@@ -9,5 +9,5 @@ export interface Bucket {
 export interface Fruit {
   id: string;
   name: string;
-  price: number;
+  price: string;
 }
